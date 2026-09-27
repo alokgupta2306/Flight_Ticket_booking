@@ -1,0 +1,32 @@
+<Flights>
+  <Flight>
+    <FlightNo>AI202</FlightNo>
+    <Route>
+      <From>Mumbai</From>
+      <To>Delhi</To>
+    </Route>
+    <Date>2026-10-01</Date>
+    <DepartureTime>06:30</DepartureTime>
+    <ArrivalTime>08:45</ArrivalTime>
+    <Aircraft>Airbus A320</Aircraft>
+    <Seats>
+      <Seat><Number>12A</Number><Class>Economy</Class><Status>AVAILABLE</Status></Seat>
+      <Seat><Number>12B</Number><Class>Economy</Class><Status>AVAILABLE</Status></Seat>
+    </Seats>
+  </Flight>
+  <Flight>
+    <FlightNo>AI305</FlightNo>
+    <Route>
+      <From>Mumbai</From>
+      <To>Delhi</To>
+    </Route>
+    <Date>2026-10-01</Date>
+    <DepartureTime>14:00</DepartureTime>
+    <ArrivalTime>16:15</ArrivalTime>
+    <Aircraft>Boeing 737</Aircraft>
+    <Seats>
+      <Seat><Number>5A</Number><Class>Business</Class><Status>AVAILABLE</Status></Seat>
+      <Seat><Number>5B</Number><Class>Business</Class><Status>AVAILABLE</Status></Seat>
+    </Seats>
+  </Flight>
+</Flights>

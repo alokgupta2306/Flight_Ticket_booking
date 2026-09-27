@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flight Booking - Book Seat</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>✈ Flight Booking System</h1>
+  <nav>
+    <a href="index.html">Search</a>
+    <a href="mybookings.html">My Bookings</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Select Your Seat</h2>
+    <p id="flightInfo"></p>
+    <div id="seatMap">Loading seats...</div>
+  </div>
+
+  <div class="card">
+    <h2>Passenger Details</h2>
+    <form id="bookingForm">
+      <label for="passengerId">Passenger ID</label>
+      <input type="text" id="passengerId" placeholder="e.g. P1001" required>
+
+      <button type="submit">Confirm Booking</button>
+    </form>
+    <div id="message"></div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

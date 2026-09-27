@@ -1,0 +1,8 @@
+<Passengers>
+  <Passenger>
+    <PassengerId>P1001</PassengerId>
+    <Name>Alok Gupta</Name>
+    <Email>alok@example.com</Email>
+    <Phone>9999999999</Phone>
+  </Passenger>
+</Passengers>

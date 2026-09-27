@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flight Booking - My Bookings</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>✈ Flight Booking System</h1>
+  <nav>
+    <a href="index.html">Search</a>
+    <a href="mybookings.html">My Bookings</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Find My Bookings</h2>
+    <form id="lookupForm">
+      <label for="passengerId">Passenger ID</label>
+      <input type="text" id="passengerId" placeholder="e.g. P1001" required>
+      <button type="submit">View Bookings</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Your Bookings</h2>
+    <div id="bookingsList">Enter a Passenger ID above to view bookings.</div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/mybookings.js"></script>
+</body>
+</html>

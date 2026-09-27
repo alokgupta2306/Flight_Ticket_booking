@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flight Booking - Search</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>✈ Flight Booking System</h1>
+  <nav>
+    <a href="index.html">Search</a>
+    <a href="mybookings.html">My Bookings</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Search Flights</h2>
+    <form id="searchForm">
+      <label for="from">From</label>
+      <input type="text" id="from" placeholder="e.g. Mumbai" required>
+
+      <label for="to">To</label>
+      <input type="text" id="to" placeholder="e.g. Delhi" required>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
+
+      <button type="submit">Search Flights</button>
+    </form>
+    <div id="message"></div>
+  </div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
