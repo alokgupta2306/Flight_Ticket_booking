@@ -6,8 +6,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Download and install BaseX 12.4 (matching local dev version)
-RUN wget -v https://files.basex.org/releases/12.4/BaseX124.zip -O /tmp/basex.zip && \
-    unzip -q /tmp/basex.zip -d /opt/basex && \
+RUN wget -q https://files.basex.org/releases/12.4/BaseX124.zip -O /tmp/basex.zip && \
+    unzip -q /tmp/basex.zip -d /opt && \
     rm /tmp/basex.zip && \
     chmod +x /opt/basex/bin/basex /opt/basex/bin/basexhttp
 
