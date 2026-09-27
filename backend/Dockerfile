@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get install -y openjdk-17-jre-headless wget unzip ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
-# Download and install BaseX (pinned version, not "latest")
-RUN wget -v https://files.basex.org/releases/BaseX9.7.3/BaseX9.7.3.zip -O /tmp/basex.zip && \
+# Download and install BaseX 12.4 (matching local dev version)
+RUN wget -v https://files.basex.org/releases/12.4/BaseX124.zip -O /tmp/basex.zip && \
     unzip -q /tmp/basex.zip -d /opt/basex && \
     rm /tmp/basex.zip && \
     chmod +x /opt/basex/bin/basex /opt/basex/bin/basexhttp
