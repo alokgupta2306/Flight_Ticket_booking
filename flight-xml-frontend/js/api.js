@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000';
+const API_BASE = 'https://flight-ticket-booking-zegj.onrender.com';
 
 // Parses XML text response into a JS-friendly array of objects (simple flat parser)
 function parseXML(xmlText) {
