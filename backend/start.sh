@@ -1,18 +1,23 @@
 #!/bin/bash
 set -e
 
-# Start BaseX HTTP server in the background
+echo ">>> Starting BaseX HTTP server..."
 basexhttp &
 
-# Give it time to boot up
-sleep 8
+echo ">>> Waiting for BaseX to be ready..."
+sleep 10
 
-# Set a known password every startup (container storage is temporary, so this must run every time)
-basex -c "ALTER PASSWORD admin admin123"
+echo ">>> Setting admin password..."
+basex -c "ALTER PASSWORD admin admin123" 2>&1
 
-# Recreate the database fresh from bundled XML data every startup
-basex -c "DROP DB flightsdb" || true
-basex -c "CREATE DB flightsdb data"
+echo ">>> Dropping old database (if exists)..."
+basex -c "DROP DB flightsdb" 2>&1 || echo ">>> No existing database to drop."
 
-# Start the Express backend
+echo ">>> Creating database from /app/data ..."
+basex -c "CREATE DB flightsdb /app/data" 2>&1
+
+echo ">>> Verifying database..."
+basex -c "OPEN flightsdb; xquery count(collection('flightsdb')/Flights/Flight)" 2>&1
+
+echo ">>> Starting Express server..."
 node server.js
